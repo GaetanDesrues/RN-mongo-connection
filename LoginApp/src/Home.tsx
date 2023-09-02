@@ -1,15 +1,13 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
+import {useUser} from './components/UserProvider';
 
 function Home(): JSX.Element {
+  const {user, logout} = useUser();
+
   return (
     <SafeAreaView>
-      <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Oui</Text>
-        </View>
-      </ScrollView>
+      <Text>Welcome {user}</Text>
     </SafeAreaView>
   );
 }

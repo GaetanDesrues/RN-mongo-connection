@@ -1,11 +1,14 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import Home from './src/Home';
+import AppNav from './src/AppNav';
+import {UserProvider} from './src/components/UserProvider';
 
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-      <Home />
+      <UserProvider>
+        <AppNav />
+      </UserProvider>
     </SafeAreaView>
   );
 }
